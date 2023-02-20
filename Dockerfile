@@ -14,6 +14,6 @@ RUN dotnet publish "schoolapApiGaway.Api.csproj" -c Release -o /app/publish /p:U
 
 FROM base AS final
 WORKDIR /app
-EXPOSE 5000
+EXPOSE 5012
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "schoolapApiGaway.Api.dll"]
